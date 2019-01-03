@@ -38,16 +38,16 @@ RUN echo "Building SEPIA-Home (custom bundle) ..." && \
 	cd ~/SEPIA/tmp && \
 #
 #	Download files
-	wget -O sepia-custom-bundle-folder.zip https://github.com/SEPIA-Framework/sepia-installation-and-setup/blob/master/sepia-custom-bundle-folder.zip?raw=true && \
+	wget -O sepia-custom-bundle-folder.zip https://github.com/EmonFan/sepia-installation-and-setup/blob/master/sepia-custom-bundle-folder.zip?raw=true && \
 	unzip -n sepia-custom-bundle-folder.zip -d ~/SEPIA && \
 #
-	git clone https://github.com/SEPIA-Framework/sepia-core-tools-java.git && \
-	git clone https://github.com/SEPIA-Framework/sepia-websocket-server-java.git && \
-	git clone https://github.com/SEPIA-Framework/sepia-assist-server.git && \
-	git clone https://github.com/SEPIA-Framework/sepia-teach-server.git && \
-	git clone https://github.com/SEPIA-Framework/sepia-reverse-proxy.git && \
-	git clone https://github.com/SEPIA-Framework/sepia-html-client-app.git && \
-	git clone https://github.com/SEPIA-Framework/sepia-admin-tools.git && \
+	git clone https://github.com/EmonFan/sepia-core-tools-java.git && \
+	git clone https://github.com/EmonFan/sepia-websocket-server-java.git && \
+	git clone https://github.com/EmonFan/sepia-assist-server.git && \
+	git clone https://github.com/EmonFan/sepia-teach-server.git && \
+	git clone https://github.com/EmonFan/sepia-reverse-proxy.git && \
+	git clone https://github.com/EmonFan/sepia-html-client-app.git && \
+	git clone https://github.com/EmonFan/sepia-admin-tools.git && \
 #
 #	Build all modules and copy client and admin-tools
 	cd sepia-core-tools-java && mvn install && cp -r target/release/. ~/SEPIA/sepia-assist-server/ && cd .. && \
